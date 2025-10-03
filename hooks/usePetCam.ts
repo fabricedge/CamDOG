@@ -1,8 +1,6 @@
-
 import { useState, useRef, useCallback, useEffect } from 'react';
-import type { LogEntry, ConnectionState } from '../types';
-import { LogType } from '../types';
-// FIX: Removed 'LiveSession' from import as it is not an exported member of '@google/genai'.
+import type { LogEntry, ConnectionState } from '@/types';
+import { LogType } from '@/types';
 import { GoogleGenAI, Modality, LiveServerMessage, Blob } from '@google/genai';
 
 // --- Helper Functions for Audio Processing ---
@@ -65,7 +63,6 @@ export const usePetCam = () => {
     const [logEntries, setLogEntries] = useState<LogEntry[]>([]);
     const [mediaStream, setMediaStream] = useState<MediaStream | null>(null);
 
-    // FIX: Replaced 'LiveSession' with 'any' since it is not an exported type, to resolve the type error.
     const sessionPromiseRef = useRef<Promise<any> | null>(null);
     const inputAudioContextRef = useRef<AudioContext | null>(null);
     const outputAudioContextRef = useRef<AudioContext | null>(null);
@@ -98,7 +95,7 @@ export const usePetCam = () => {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
             setMediaStream(stream);
 
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+            const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_API_KEY as string });
             
             const sessionPromise = ai.live.connect({
                 model: 'gemini-2.5-flash-native-audio-preview-09-2025',

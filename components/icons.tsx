@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const InfoIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -24,7 +23,6 @@ export const TreatIcon: React.FC<{ className?: string }> = ({ className }) => (
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H9v-8.621a4.002 4.002 0 01.423-1.857l1.143-2.285a2 2 0 011.824-1.049h1.218a2 2 0 011.824 1.05l1.143 2.285a4 4 0 01.423 1.857V21z" />
     </svg>
 );
-
 
 export const SoundIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">

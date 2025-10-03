@@ -1,4 +1,3 @@
-
 export enum LogType {
   INFO = 'INFO',
   USER_SPEECH = 'USER_SPEECH',

@@ -1,14 +1,12 @@
-
 import React from 'react';
-import type { LogEntry } from '../types';
-import { LogType } from '../types';
+import type { LogEntry } from '@/types';
+import { LogType } from '@/types';
 import { BotIcon, ErrorIcon, InfoIcon, SoundIcon, TreatIcon, UserIcon } from './icons';
 
 interface LogItemProps {
     entry: LogEntry;
 }
 
-// FIX: Updated getIcon to accept and use the log message to correctly display action-specific icons. The 'name' variable was undefined.
 const getIcon = (type: LogType, message: string) => {
     const iconClass = "w-5 h-5 mr-3 flex-shrink-0";
     switch (type) {
@@ -29,7 +27,6 @@ const getIcon = (type: LogType, message: string) => {
             return <InfoIcon className={`${iconClass} text-gray-400`} />;
     }
 };
-
 
 export const LogItem: React.FC<LogItemProps> = ({ entry }) => {
     return (

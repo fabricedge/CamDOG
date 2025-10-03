@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import type { ConnectionState } from '../types';
+import type { ConnectionState } from '@/types';
 
 interface ControlPanelProps {
     connectionState: ConnectionState;

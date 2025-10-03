@@ -1,6 +1,5 @@
-
 import React, { useRef, useEffect } from 'react';
-import type { LogEntry } from '../types';
+import type { LogEntry } from '@/types';
 import { LogItem } from './LogItem';
 
 interface InteractionLogProps {
