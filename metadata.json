@@ -1,0 +1,8 @@
+{
+  "name": "Gemini Pet Cam",
+  "description": "An interactive pet camera that lets you talk to your pet from anywhere using Gemini's real-time audio capabilities. See your pet, talk to them, and dispense virtual treats.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
